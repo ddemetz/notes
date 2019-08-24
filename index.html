@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Radio Template</title>
+
+</head>
+<body>
+
+
+
+    <h4>Question</h4>
+    <!-- options -->
+    <p>
+
+        <label><input type="radio" name="questionOne" value="optionOne">Option 1</label>
+        <label><input type="radio" name="questionOne" value="optionTwo">Option 2</label>
+    </p>
+
+    <h4>Question</h4>
+    <!-- options -->
+    <p>
+
+        <label><input type="radio" name="questionTwo" value="optionOne">Option 1</label>
+        <label><input type="radio" name="questionTwo" value="optionTwo">Option 2</label>
+            <label><input type="radio" name="questionTwo" value="optionThree">Option 3</label>
+    </p>
+
+
+<!-- submit button -->
+
+    <p><input type="button" value="Get Value"></p>
+
+    <!-- result shows up here -->
+
+<div class="secretContainer"></div>
+
+<!-- jquery -->
+<!-- jquery goes before ext link -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+
+
+
+<script>
+  // result will pop up here
+
+  var secretContainer = $('.secretContainer');
+
+  // loads js when screen does
+
+$(document).ready(function(){
+  // function when button is clicked
+
+$("input[type='button']").click(function(){
+
+    // question variables
+
+    var questionOneVal = $("input[name='questionOne']:checked").val();
+    var questionTwoVal = $("input[name='questionTwo']:checked").val();
+
+    // feelingValue  - var to use in the future
+
+    // input - select input
+
+    // name='feeling' - will select the input with this name
+
+    // :checked - selects the checked option
+
+    // val() takes the value of the checked option
+
+    if (questionOneVal=='optionOne' && questionTwoVal=="optionThree"){
+
+// .append .empty's and .text's what's in the paranthases
+
+secretContainer.append(`<h1>What you want to appear</h1>`)
+}
+
+
+
+});
+
+});
+
+</script>
+
+
+</body>
+</html>
