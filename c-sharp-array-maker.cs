@@ -108,6 +108,11 @@ namespace arraymaker
                 return;
             }
 
+            else if (lang.ToLower() == "back")
+            {
+                goto Array;
+            }
+
             //if the language isn't recognized, it gets confuzzled and sad, and lets you try again! uwu xD kmn
             else
 			        { goto um;}
