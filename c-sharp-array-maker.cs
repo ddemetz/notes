@@ -14,7 +14,7 @@ namespace arraymaker
 
 
 // Naming the array
-        Naming:
+        naming:
             //Name your array + get rid of any spaces at the end
             Console.WriteLine("What's the name of your array?");
             string name = Console.ReadLine();
@@ -28,16 +28,16 @@ namespace arraymaker
 
 // Filling the array
 
-        Array:
+        array:
             //Input list
-            Console.WriteLine("Make Your Array");
             Console.WriteLine("");
+            Console.WriteLine("Make Your Array");
             Console.WriteLine($"{name}:");
             string words = Console.ReadLine();
 
             //If you mess up the name
             if (words.ToLower() == "back")
-                goto Naming;
+                goto naming;
 
             //if you use commas, fantastic, you should. if not, i save the day
             int count = words.Split(',').Length - 1;
@@ -67,7 +67,7 @@ namespace arraymaker
 
             //If you mess up the array
             if (name.ToLower() == "back")
-                goto Array;
+                goto array;
 
             //skips 'um'
             goto language;
@@ -86,11 +86,22 @@ namespace arraymaker
 			    if (lang == "ruby" || lang == "javascript" || lang == "c#" || lang == "swift" || lang == "java" || lang == "c++" || lang == "python" || lang == "c")
 			        { goto translate;}
 
-                // if these are selected,,, sucks
+                // if these are selected,,, sucks             
                 else if (lang == "SQL" || lang == "php")
-			        { Console.WriteLine("Working on it...");
+			        {
+                Console.WriteLine("");
+                Console.WriteLine("Working on it...");
 				      return;
 			        }
+
+                // because people like to make jokes
+                 else if (lang == "english" || lang == "french" || lang == "spanish" || lang == "italian" || lang == "tagalog")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("please,,,a coding language,,,i beg of you");
+                goto language;
+            }
+
 
             // gives a list of languages
             else if (lang == "help")
@@ -110,7 +121,7 @@ namespace arraymaker
 
             else if (lang.ToLower() == "back")
             {
-                goto Array;
+                goto array;
             }
 
             //if the language isn't recognized, it gets confuzzled and sad, and lets you try again! uwu xD kmn
