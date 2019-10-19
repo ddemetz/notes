@@ -80,9 +80,6 @@ namespace arraymaker
 			{
 				Console.WriteLine($"arrayName = [\"{betterWords}\"]");
 			}
-
-
-
 		}
     }
 }
