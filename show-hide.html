@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Show/Hide Button</title>
+<!-- style can be in the head of the HTML, or in a seperate CSS file -->
+    <style>
+
+/* display value is initially 'none' (or can be changed to 'hidden') so it doesn't appear initally */
+#content{
+  display: none;
+}
+    </style>
+  </head>
+  <body>
+    <!-- button that has an event listener in the js that changes the css when clicked -->
+<button id="button">Show/Hide</button>
+<!-- put all the content you want to show/hide into this div -->
+  <div id="content">
+<img src="https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/2018-02/vicious_dog_0.png?itok=nsghKOHs">
+  </div>
+
+  <!-- If you want multiple buttons/content to show/hide, copy and paste lines 31 - 46 and rename the duplicate variables ie: button > buttonTwo.-->
+
+  <!--script can be at the bottom of the body element, or in a seperate Javascript file. -->
+<script>
+
+// selecting the first id in the HTML named 'button' and saving the element as a variable, in this case, that's the Show/Hide button
+var button= document.getElementById('button')
+
+// selecting the first id in the HTML named 'content' and saving the element as a variable, in this case, that's the content div with the image
+var content= document.getElementById('content')
+
+// we're taking the button variable we saved and giving it an event listener. It's waiting for a "click" and will preform the function
+button.addEventListener("click", function(){
+
+// if the style of 'content' aka the div with the content id has a display value of 'none', it changes it to 'block'
+    if (content.style.display === "none") {
+      content.style.display = "block";
+    }
+// if that previous statement is untrue, aka, you can see the div, then it changes the display value to 'none'
+    else {
+      content.style.display = "none";
+    }
+})
+
+
+
+</script>
+
+
+
+  </body>
+</html>
